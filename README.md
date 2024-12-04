@@ -1,4 +1,4 @@
-Plateforme de microblogging
+Microblogging Project
 
 ## À propos 
 
