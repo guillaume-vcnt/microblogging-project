@@ -12,11 +12,9 @@
 }
 
 body {
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
+  height: 100vh;
+  border: solid 1px red;
+  overflow: hidden;
   background-image: url("./assets/pictures/img1.wallspic.com-art-arts_visuels-dessin-atmosphere-lecoregion-3840x2160.png"); /* Chemin de l'image */
   background-size: cover; /* Couvre toute la zone de l'élément */
   background-position:center;

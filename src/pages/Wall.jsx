@@ -1,11 +1,10 @@
 import React from "react";
-import Navigation from "../components/Navigation";
+import HeaderBar from "../components/HeaderBar";
 
 const Wall = () => {
   return (
     <div className="Wall">
-      <Navigation />
-      <h1>WALL PAGE</h1>
+      <HeaderBar />
     </div>
   );
 };
