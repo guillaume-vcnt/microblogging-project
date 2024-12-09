@@ -6,9 +6,11 @@
     background: transparent;
     cursor: pointer;
     overflow: hidden;
+    margin-top:18%;
 }
 
-.user-profil-button img {
-    width: 60px; 
-    height: 60px;
-  }
+.icon-user-profil {
+    height: 1.5rem;
+    width: 1.5rem;
+    color: white;
+}

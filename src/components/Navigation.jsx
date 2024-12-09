@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Navigation.css";
-import BipBip from '../assets/pictures/BipBip.png';
+import { FaUserLarge } from "react-icons/fa6";
 
 const Navigation = () => {
   return (
@@ -28,7 +28,7 @@ const UserProfileLink = () => {
     <NavLink to="/userprofil">
       <div className="user-profil-div">
         <button className="user-profil-button">
-        <img src={BipBip} alt="Profile" />
+        <FaUserLarge className="icon-user-profil" />
         </button>
       </div>
     </NavLink>

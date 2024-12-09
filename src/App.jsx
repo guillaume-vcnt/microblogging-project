@@ -8,6 +8,7 @@ import Wall from "./pages/Wall";
 import "./App.css";
 
 function App() {
+
   return (
     <BrowserRouter>
       <Routes>
