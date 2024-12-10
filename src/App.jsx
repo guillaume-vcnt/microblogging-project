@@ -8,11 +8,10 @@ import Wall from "./pages/Wall";
 import "./App.css";
 
 function App() {
-
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
         <Route path="/userprofil" element={<UserProfil />} />
         <Route path="/wall" element={<Wall />} />
         <Route path="*" element={<Login />} />

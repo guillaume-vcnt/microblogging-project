@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
-import { FaSearch } from 'react-icons/fa';
-import './SearchBar.css';
+import { useState } from "react";
+import { FaSearch } from "react-icons/fa";
+import "./SearchBar.css";
 
 const SearchBar = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleInputChange = (event) => {
     setSearchTerm(event.target.value);
@@ -11,7 +11,7 @@ const SearchBar = () => {
 
   const handleSearch = () => {
     // Ajoutez ici la logique de recherche
-    console.log('Recherche pour :', searchTerm);
+    console.log("Recherche pour :", searchTerm);
   };
 
   return (

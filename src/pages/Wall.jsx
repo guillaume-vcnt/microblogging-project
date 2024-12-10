@@ -5,11 +5,11 @@ import FooterBar from "../components/FooterBar";
 const Wall = () => {
   return (
     <>
-    <div className="Wall">
-      <HeaderBar />
-    </div>
-    <div className="foot-bar-wall">
-      <FooterBar />
+      <div className="Wall">
+        <HeaderBar />
+      </div>
+      <div className="foot-bar-wall">
+        <FooterBar />
       </div>
     </>
   );

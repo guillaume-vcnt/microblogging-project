@@ -1,9 +1,8 @@
-import React from "react";
-import React, { useState } from "react";
-import RegistrerForm from "./RegistrerForm";
-import LoginForm from "./LoginForm";
+import { useState } from "react";
+import RegistrerForm from "../components(off)/RegistrerForm";
+import LoginForm from "../components/LoginForm";
 
-const LoginSat = () => {
+const LoginSatut = () => {
   const [signUpModal, setSignUpModal] = useState(true);
   const [signInModal, setSignInModal] = useState(false);
 
@@ -42,4 +41,4 @@ const LoginSat = () => {
   );
 };
 
-export default LoginSat;
+export default LoginSatut;

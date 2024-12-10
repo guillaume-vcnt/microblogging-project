@@ -17,13 +17,9 @@ body {
   overflow: hidden;
   background-image: url("./assets/pictures/img1.wallspic.com-art-arts_visuels-dessin-atmosphere-lecoregion-3840x2160.png"); /* Chemin de l'image */
   background-size: cover; /* Couvre toute la zone de l'élément */
-  background-position:center;
+  background-position: center;
   background-repeat: no-repeat; /* Empêche la répétition de l'image */
 }
 
 @media() {
 }
-
-
-
-

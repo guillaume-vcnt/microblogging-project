@@ -1,31 +1,43 @@
 import { useNavigate } from "react-router-dom";
-import { FaUserAlt } from "react-icons/fa";
-import { FaLock } from "react-icons/fa";
-import React, { useState, useEffect } from "react";
-import "./loginForm.css";
+import { FaUserAlt, FaLock } from "react-icons/fa";
+import { useState } from "react";
 import axios from "axios";
+import "./loginForm.css";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const apiUrl = String(import.meta.env.VITE_API_URL);
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/wall");
+  };
 
-  const handleLogin = (e) => {
-    e.preventDefault();
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const emailError = document.querySelector(".email-error");
+    const passwordError = document.querySelector(".password-error");
 
     axios({
       method: "post",
-      url: `${process.env.REACT_APP_API_URL}api/login/`,
+      url: `${apiUrl}api/login/`,
       withCredentials: true,
       data: {
         email,
         password,
-      }
-    });
-  };
-
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("/wall");
+      },
+    })
+      .then((res) => {
+        if (res.data.errors) {
+          emailError.innerHTML = res.data.errors.email;
+          passwordError.innerHTML = res.data.errors.password;
+        } else {
+          window.location = "/";
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
@@ -35,6 +47,7 @@ const LoginForm = () => {
         <div className="input-box">
           <input
             type="text"
+            className="email-error"
             name="username"
             id="username"
             placeholder="Username"
@@ -47,6 +60,7 @@ const LoginForm = () => {
         <div className="input-box">
           <input
             type="password"
+            className="password-error"
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
             value={password}

@@ -1,13 +1,13 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./Navigation.css";
 import { FaUserLarge } from "react-icons/fa6";
+import "./Navigation.css";
 
 const Navigation = () => {
   return (
     <div className="navigation">
       <ul>
-        <NavLink to="/">
+        <NavLink to="/login">
           <li>Login</li>
         </NavLink>
         <NavLink to="/userprofil">
@@ -28,7 +28,7 @@ const UserProfileLink = () => {
     <NavLink to="/userprofil">
       <div className="user-profil-div">
         <button className="user-profil-button">
-        <FaUserLarge className="icon-user-profil" />
+          <FaUserLarge className="icon-user-profil" />
         </button>
       </div>
     </NavLink>
