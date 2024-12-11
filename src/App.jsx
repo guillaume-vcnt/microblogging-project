@@ -2,19 +2,19 @@
 
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Login from "./pages/Login";
-import UserProfil from "./pages/UserProfil";
-import Wall from "./pages/Wall";
+import LoginPage from "./pages/LoginPage";
+import UserProfilPage from "./pages/UserProfilPage";
+import WallPage from "./pages/WallPage";
 import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/userprofil" element={<UserProfil />} />
-        <Route path="/wall" element={<Wall />} />
-        <Route path="*" element={<Login />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/userprofil" element={<UserProfilPage />} />
+        <Route path="/wall" element={<WallPage />} />
+        <Route path="*" element={<LoginPage />} />
       </Routes>
     </BrowserRouter>
   );

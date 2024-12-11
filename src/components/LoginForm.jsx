@@ -9,7 +9,7 @@ const LoginForm = ({
   password,
   setPassword,
   handleSubmit,
-  // errors,
+  errors,
 }) => {
   return (
     <div className="login-form">
@@ -24,16 +24,15 @@ const LoginForm = ({
             autoComplete="email"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
-            // className={errors?.email ? "input-error" : ""}
+            className={errors?.email ? "input-error" : ""}
             required
           />
 
           <FaUserAlt className="icon" />
 
-          {/* {errors?.email && (
-              <span className="error-message">{errors.email}</span>
-            )} */}
-
+          {errors?.email && (
+            <span className="error-message">{errors.email}</span>
+          )}
         </div>
 
         <div className="input-box">
@@ -44,29 +43,28 @@ const LoginForm = ({
             autoComplete="current-password"
             onChange={(e) => setPassword(e.target.value)}
             value={password}
-            // className={errors?.password ? "input-error" : ""}
+            className={errors?.password ? "input-error" : ""}
             required
           />
 
           <FaLock className="icon" />
 
-          {/* {errors?.password && (
+          {errors?.password && (
             <span className="error-message">{errors.password}</span>
-          )} */}
-
+          )}
         </div>
 
         <button type="submit">Se connecter</button>
 
         <div className="register-link">
-        <br></br>
+          <br></br>
           <hr />
           <br></br>
           <p>
-            Pas de compte ? <a href="#">Inscrivez-vous ici</a>
+            Pas de compte ?&nbsp;<a href="#">Inscrivez-vous ici</a>
           </p>
           <p>
-            Mot de passe oublié ? <a href="#">Réinitialiser</a>
+            Mot de passe oublié ?&nbsp;<a href="#">Réinitialiser</a>
           </p>
         </div>
       </form>
@@ -76,11 +74,11 @@ const LoginForm = ({
 
 LoginForm.propTypes = {
   email: PropTypes.string.isRequired,
-  setEmail: PropTypes.func,
+  setEmail: PropTypes.func.isRequired,
   password: PropTypes.string.isRequired,
-  setPassword: PropTypes.func,
+  setPassword: PropTypes.func.isRequired,
   handleSubmit: PropTypes.func.isRequired,
-  // errors: PropTypes.object,
+  errors: PropTypes.object.isRequired,
 };
 
 export default LoginForm;

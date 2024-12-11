@@ -1,7 +1,7 @@
 import React from "react";
 import HeaderBar from "../components/HeaderBar";
 
-const Wall = () => {
+const WallPage = () => {
   return (
       <div className="Wall">
         <HeaderBar />
@@ -9,4 +9,4 @@ const Wall = () => {
   );
 };
 
-export default Wall;
+export default WallPage;

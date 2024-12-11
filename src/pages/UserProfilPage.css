@@ -1,0 +1,10 @@
+.User-Profil h1, p {
+    color:white;
+    display: flex;
+    justify-content: center;
+}
+
+.User-Profil h1 {
+    margin-top: 20%;
+}
+

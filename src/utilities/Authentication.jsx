@@ -1,20 +1,23 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import LoginForm from "../components/LoginForm";
 
+
 const Authentication = () => {
   const apiUrl = String(import.meta.env.VITE_API_URL);
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("georgesClooney@test.com");
+  const [password, setPassword] = useState("whatelse1");
 
   const [message, setMessage] = useState("");
   const [errors, setErrors] = useState({ email: "", password: "" });
 
   const navigate = useNavigate();
-
+  
   useEffect(() => {
+    localStorage.setItem("coucou", "allo")
+    console.log(localStorage)
     const token = localStorage.getItem("token");
     if (token) {
       navigate("/wall");
@@ -26,10 +29,13 @@ const Authentication = () => {
     try {
       const response = await axios({
         method: "post",
+        mode: "no-cors",
         url: `${apiUrl}api/login/`,
         data: { email, password },
-        withCredentials: true, //cookie active
+        withCredentials: false,
       });
+
+      console.log("😆", response);
 
       if (response.data.errors) {
         setErrors((prevErrors) => ({
@@ -61,6 +67,6 @@ const Authentication = () => {
     </React.Fragment>
   );
 };
-//Evite les noeud html
+//Evite les noeuds html
 
 export default Authentication;
