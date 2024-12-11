@@ -59,7 +59,9 @@ const LoginForm = ({
         <button type="submit">Se connecter</button>
 
         <div className="register-link">
+        <br></br>
           <hr />
+          <br></br>
           <p>
             Pas de compte ? <a href="#">Inscrivez-vous ici</a>
           </p>
