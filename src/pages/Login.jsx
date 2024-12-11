@@ -5,9 +5,9 @@ import "./Login.css";
 
 const Login = () => {
   return (
-    <div className="Login">
+    <div className="Login-page">
       <Titre />
-      <LoginForm />
+      <LoginForm/>
     </div>
   );
 };

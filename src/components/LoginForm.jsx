@@ -1,92 +1,84 @@
-import { useNavigate } from "react-router-dom";
+import React from "react";
+import PropTypes from "prop-types";
 import { FaUserAlt, FaLock } from "react-icons/fa";
-import { useState } from "react";
-import axios from "axios";
 import "./loginForm.css";
 
-const LoginForm = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const apiUrl = String(import.meta.env.VITE_API_URL);
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("/wall");
-  };
-
-  const handleLogin = (event) => {
-    event.preventDefault();
-    const emailError = document.querySelector(".email-error");
-    const passwordError = document.querySelector(".password-error");
-
-    axios({
-      method: "post",
-      url: `${apiUrl}api/login/`,
-      withCredentials: true,
-      data: {
-        email,
-        password,
-      },
-    })
-      .then((res) => {
-        if (res.data.errors) {
-          emailError.innerHTML = res.data.errors.email;
-          passwordError.innerHTML = res.data.errors.password;
-        } else {
-          window.location = "/";
-        }
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
-
+const LoginForm = ({
+  email,
+  setEmail,
+  password,
+  setPassword,
+  handleSubmit,
+  // errors,
+}) => {
   return (
-    <div className="wrapper">
-      <form action="" onSubmit={handleLogin} id="sign-in-Form">
-        <h1>Hello there !</h1>
+    <div className="login-form">
+      <form onSubmit={handleSubmit}>
+        <h1>Bienvenue !</h1>
+
         <div className="input-box">
           <input
-            type="text"
-            className="email-error"
-            name="username"
-            id="username"
-            placeholder="Username"
+            type="email"
+            id="email"
+            placeholder="Email"
+            autoComplete="email"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
+            // className={errors?.email ? "input-error" : ""}
             required
           />
+
           <FaUserAlt className="icon" />
+
+          {/* {errors?.email && (
+              <span className="error-message">{errors.email}</span>
+            )} */}
+
         </div>
+
         <div className="input-box">
           <input
             type="password"
-            className="password-error"
-            placeholder="Password"
+            id="password"
+            placeholder="Mot de passe"
+            autoComplete="current-password"
             onChange={(e) => setPassword(e.target.value)}
             value={password}
+            // className={errors?.password ? "input-error" : ""}
             required
           />
+
           <FaLock className="icon" />
+
+          {/* {errors?.password && (
+            <span className="error-message">{errors.password}</span>
+          )} */}
+
         </div>
-        <button onClick={handleClick} type="submit" value="Se connecter">
-          Login
-        </button>
+
+        <button type="submit">Se connecter</button>
 
         <div className="register-link">
-          <br></br>
-          <hr></hr>
-          <br></br>
+          <hr />
           <p>
-            Don't have an account? <a href="#">Register here</a>
+            Pas de compte ? <a href="#">Inscrivez-vous ici</a>
           </p>
-          <br></br>
           <p>
-            Forgot password? <a href="#">Reset here</a>
+            Mot de passe oublié ? <a href="#">Réinitialiser</a>
           </p>
         </div>
       </form>
     </div>
   );
+};
+
+LoginForm.propTypes = {
+  email: PropTypes.string.isRequired,
+  setEmail: PropTypes.func,
+  password: PropTypes.string.isRequired,
+  setPassword: PropTypes.func,
+  handleSubmit: PropTypes.func.isRequired,
+  // errors: PropTypes.object,
 };
 
 export default LoginForm;

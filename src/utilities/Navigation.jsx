@@ -7,15 +7,15 @@ const Navigation = () => {
   return (
     <div className="navigation">
       <ul>
-        <NavLink to="/login">
+        <NavLink to="/login" ClassName="active-link">
           <li>Login</li>
         </NavLink>
-        <NavLink to="/userprofil">
+        <NavLink to="/userprofil" ClassName="active-link">
           <li>
             <button>User Profil</button>
           </li>
         </NavLink>
-        <NavLink to="/wall">
+        <NavLink to="/wall" ClassName="active-link">
           <li>Wall</li>
         </NavLink>
       </ul>
@@ -28,7 +28,7 @@ const UserProfileLink = () => {
     <NavLink to="/userprofil">
       <div className="user-profil-div">
         <button className="user-profil-button">
-          <FaUserLarge className="icon-user-profil" />
+          <FaUserLarge className="user-profil-icon" />
         </button>
       </div>
     </NavLink>

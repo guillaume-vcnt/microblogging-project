@@ -1,0 +1,17 @@
+1. Création du formulaire de connexion
+Vous avez déjà cette étape complétée avec un formulaire de connexion en React.
+
+2. Gestion des états et des événements du formulaire
+Vous devez gérer les événements du formulaire (comme le clic sur le bouton de connexion) et maintenir l'état des données saisies par l'utilisateur.
+
+3. Communication avec le back-end
+Vous allez utiliser des requêtes HTTP pour communiquer avec le serveur back-end. Cela implique l'utilisation de fetch ou d'une bibliothèque comme axios pour envoyer les données du formulaire de connexion et recevoir les réponses.
+
+4. Stockage et gestion des jetons d'authentification
+Les jetons d'authentification (comme JWT) sont couramment utilisés pour maintenir une session utilisateur. Vous devrez stocker ces jetons dans le stockage local ou dans les cookies.
+
+5. Protection des routes (Route Guards)
+Vous devez protéger certaines routes afin que seules les personnes authentifiées puissent y accéder.
+
+6. Gérer l'état de l'utilisateur (connecté ou non)
+Utilisez un state manager comme Context API ou Redux pour gérer l'état global de l'utilisateur dans votre application.
