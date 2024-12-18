@@ -27,3 +27,7 @@ OS : Windows, Mac, Linux
 ## Utilisation 
 
 S'exécute via ...
+
+## Contributions
+
+Partie Backend : https://github.com/Ketsia793/microblogging-back-end
