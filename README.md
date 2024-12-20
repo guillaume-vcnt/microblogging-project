@@ -1,6 +1,6 @@
 BipBip.
 
-## À propos 
+## À propos
 
 Ce projet est destiné à valider un diplôme RNCP (Niv 6) : Concepteur Développeur d'Application.
 
