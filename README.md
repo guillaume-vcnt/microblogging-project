@@ -16,7 +16,7 @@ Services :  Supabase
 
 Refactorisation : 
 
-Responsivité : 
+Responsive : 
 
 UX/UI : 
 
@@ -26,7 +26,7 @@ OS : Windows, Mac, Linux
 
 ## Utilisation 
 
-S'exécute via :
+S'exécute via localhost
 
 ## Contributions
 
