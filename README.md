@@ -2,7 +2,7 @@ Microblogging Project
 
 ## À propos 
 
-- Ce projet est destiné à valider un diplôme RNCP (Niv 6) : Concepteur Développeur d'Application.
+Ce projet est destiné à valider un diplôme RNCP (Niv 6) : Concepteur Développeur d'Application.
 
 ## Caractéristiques
 
